@@ -5,7 +5,6 @@ import javax.swing.JOptionPane;
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-
 /**
  *
  * @author Nestor Marchizone
@@ -135,7 +134,11 @@ public class ConversorTemperatura extends javax.swing.JFrame {
     }//GEN-LAST:event_jTingresoActionPerformed
 
     private void jBConvertirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBConvertirActionPerformed
-        
+        try {
+          
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(this, "Dato incorrecto, ingrese un valor valido", "Error", JOptionPane.ERROR_MESSAGE);
+        }
     }//GEN-LAST:event_jBConvertirActionPerformed
 
     /**
