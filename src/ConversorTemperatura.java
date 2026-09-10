@@ -130,7 +130,18 @@ public class ConversorTemperatura extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTingresoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTingresoActionPerformed
-        // TODO add your handling code here:
+        double celsius = Double.parseDouble(jTingreso.getText());
+
+        double resultado = 0;
+        String unidad = "";
+
+        if (jRtnFahrenhei.isSelected()) {
+            resultado = celsius * 9.0 / 5.0 + 32;
+            unidad = "Fahrenheit";
+        } else if (jRtnCelcius.isSelected()) {
+            resultado = celsius;
+            unidad = "Celsius";
+        }
     }//GEN-LAST:event_jTingresoActionPerformed
 
     private void jBConvertirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBConvertirActionPerformed
