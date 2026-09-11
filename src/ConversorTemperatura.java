@@ -141,7 +141,15 @@ public class ConversorTemperatura extends javax.swing.JFrame {
         } else if (jRtnCelcius.isSelected()) {
             resultado = celsius;
             unidad = "Celsius";
+        }else if (jRtnKevin.isSelected()) {
+            resultado = celsius + 273.15;  // formula C a K
+            unidad = "Kelvin";
+        } else if (jRtnRadianes.isSelected()) {
+            resultado = celsius * Math.PI / 180;
+            unidad = "Radianes";
         }
+        
+       JOptionPane.showMessageDialog(this, "La temperatura en grados " + unidad + " es: " + resultado); 
     }//GEN-LAST:event_jTingresoActionPerformed
 
     private void jBConvertirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBConvertirActionPerformed
